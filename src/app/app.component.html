@@ -2,9 +2,10 @@
 
 {{ title }}
 
-<app-product>
-    
-</app-product>
+<li *ngFor="let product of products">
+    <app-product (productClicked)="clickProduct($event)" [product]="product"></app-product>
+</li>
+
 
 <div *ngIf="title === 'jose'">
     Div with *NgIf title === 'jose'
